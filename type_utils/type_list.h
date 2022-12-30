@@ -109,6 +109,7 @@ namespace type_utils
     private:
 
         // PrintHelper
+        
         template<typename TList>
         static void PrintHelper(std::ostream& ostream)
         {

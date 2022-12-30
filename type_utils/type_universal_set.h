@@ -80,8 +80,6 @@ namespace type_utils
             typename T>
         struct ConstructListHelper<TValidator, TComparator, TList, T>
         {
-            static_assert(TValidator<T>::value, "Wrong item type");
-
             using result = typename InsertHelper<TValidator, TComparator, TList, T>::result;
         };
 
@@ -93,8 +91,6 @@ namespace type_utils
             typename ...TTail>
         struct ConstructListHelper<TValidator, TComparator, TList, THead, TTail...>
         {
-            static_assert(TValidator<THead>::value, "Wrong item type");
-
             using result = typename InsertHelper<
                 TValidator,
                 TComparator,

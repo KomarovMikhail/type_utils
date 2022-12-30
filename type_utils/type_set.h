@@ -15,9 +15,14 @@ namespace type_utils
 
     public:
 
+        // Container
+
         template<typename ...T>
         using Container = UniversalSet::Container<AnyValidator, std::is_same, T...>;
 
+
+        // Print
+        
         template<typename TSet>
         static void Print(std::ostream& ostream)
         {
